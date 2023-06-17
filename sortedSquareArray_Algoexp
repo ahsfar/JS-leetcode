@@ -1,0 +1,10 @@
+function sortedSquaredArray(array) {
+  // Write your code here.
+  let squareArr = [] 
+  for (let i in array){
+    squareArr.push(array[i]*array[i])
+   
+  }
+     squareArr.sort((a, b) => a - b)
+  return squareArr;
+}
