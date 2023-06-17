@@ -1,0 +1,31 @@
+function isValidSubsequence(array, sequence) {
+  // Write your code here.
+
+const string = array.join("");
+const stringb = sequence.join("");
+
+if (string.includes(stringb)) {
+  return true;
+}
+  
+  let check = []
+  for(let i =0; i<array.length; i++){
+    for (let j=0; j<sequence.length; j++){
+      if (array[i] == (sequence[j])){
+        
+        check.push(array[i])
+        array.splice(i, 1)
+
+        
+      }
+    }
+}
+  if (check.length === sequence.length){
+    return true
+  }
+  else return false
+  
+}
+
+// Do not edit the line below.
+exports.isValidSubsequence = isValidSubsequence;
